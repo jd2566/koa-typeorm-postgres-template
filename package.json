@@ -1,0 +1,44 @@
+{
+  "name": "tea-shelf",
+  "version": "0.0.1",
+  "main": "server.js",
+  "repository": "ssh://git@gitlab.ideas.iii.org.tw:10022/iii/tea-shelf.git",
+  "author": "bolinli <bolinli@iii.org.tw>",
+  "license": "MIT",
+  "scripts": {
+    "start": "npm run build:live",
+    "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/server.ts",
+    "build": "rm -rf dist && tsc"
+  },
+  "dependencies": {
+    "@koa/cors": "^3.0.0",
+    "class-validator": "^0.9.1",
+    "dotenv": "^8.0.0",
+    "koa": "^2.7.0",
+    "koa-body": "^4.1.0",
+    "koa-helmet": "^4.2.0",
+    "koa-joi-router": "^6.0.0",
+    "koa-jwt": "^3.6.0",
+    "koa-logger": "^3.2.1",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "pg": "^7.12.0",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.18",
+    "validator": "^11.1.0",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^6.1.1",
+    "@types/koa": "^2.0.49",
+    "@types/koa-helmet": "^3.1.2",
+    "@types/koa-joi-router": "^5.2.2",
+    "@types/node": "^12.6.8",
+    "@types/pg": "^7.4.14",
+    "eslint": "^6.1.0",
+    "eslint-config-google": "^0.13.0",
+    "nodemon": "^1.19.1",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
+  }
+}
